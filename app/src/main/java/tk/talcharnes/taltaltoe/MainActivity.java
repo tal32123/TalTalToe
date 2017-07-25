@@ -4,11 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.TextView;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     Button C3;
 
     int restartMarginTop;
+    private InterstitialAd mInterstitialAd;
+
 
 
     @Override
@@ -48,6 +55,23 @@ public class MainActivity extends AppCompatActivity {
         restartText = (TextView) findViewById(R.id.gameoverText);
         winnerView = (TextView) findViewById(R.id.winner_string);
         restartMarginTop = toolbar.getLayoutParams().height + 50;
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                super.onAdClosed();
+                restartGame();
+            }
+
+            @Override
+            public void onAdFailedToLoad(int i) {
+                super.onAdFailedToLoad(i);
+            }
+        });
+
 
 
         ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) restartText.getLayoutParams();
@@ -121,7 +145,15 @@ public class MainActivity extends AppCompatActivity {
         else return false;
     }
 
-    public void restart(View view) {
+    public void endGame(View view) {
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.");
+            restartGame();
+        }
+    }
+    private void restartGame(){
         finish();
         startActivity(starterIntent);
     }

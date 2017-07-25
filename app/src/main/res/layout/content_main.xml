@@ -113,5 +113,5 @@
         android:id="@+id/restartbutton"
         android:layout_below="@id/winner_string"
         android:visibility="gone"
-        android:onClick="restart"/>
+        android:onClick="endGame"/>
 </RelativeLayout>

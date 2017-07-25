@@ -8,4 +8,5 @@
     <string name="player_1_wins">Player 1 Wins!</string>
     <string name="player_2_wins">Player 2 Wins!</string>
     <string name="draw_game">Draw!</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-9373264602198577/5555726392</string>
 </resources>

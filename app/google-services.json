@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "589892718840",
+    "firebase_url": "https://taltaltoe-99ef5.firebaseio.com",
+    "project_id": "taltaltoe-99ef5",
+    "storage_bucket": "taltaltoe-99ef5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589892718840:android:6610bb643651516b",
+        "android_client_info": {
+          "package_name": "tk.talcharnes.taltaltoe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589892718840-u2e3fkm99nmtf5bc9fe60kqj609cqgql.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tk.talcharnes.taltaltoe",
+            "certificate_hash": "3737ae412440f45fc8c9378816adb53d496b7d18"
+          }
+        },
+        {
+          "client_id": "589892718840-e7jmg41dbpqtr5vl9vfl4o4jheu1q98m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD83JTT6RMckr_stC_qoyfcGVQbs_nJeM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589892718840-e7jmg41dbpqtr5vl9vfl4o4jheu1q98m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
