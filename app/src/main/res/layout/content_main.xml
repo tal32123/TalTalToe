@@ -109,6 +109,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="@string/restartbutton"
+        android:textSize="20sp"
         android:id="@+id/restartbutton"
         android:layout_below="@id/winner_string"
         android:visibility="gone"

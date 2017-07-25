@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void gameOver(){
         playing = false;
-        gameBoard.setAlpha(.5f);
+        gameBoard.setAlpha(.3f);
         restartText.setVisibility(View.VISIBLE);
         restartButton.setVisibility(View.VISIBLE);
         winnerView.setText(winner);
