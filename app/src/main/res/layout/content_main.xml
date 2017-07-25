@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+<GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tk.talcharnes.taltaltoe.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@android:color/black"
+    android:rowCount="3"
+    android:columnCount="3"
+    android:id="@+id/gameBoard">
+    <Button
+        android:id="@+id/A1"
+        style="@style/boardPosition"
+        android:layout_column="0"
+        android:layout_row="0"
+        tools:text="A1"
+        android:onClick="playGame"
+        />
+    <Button
+        android:id="@+id/A2"
+        style="@style/boardPosition"
+        android:layout_column="1"
+        android:layout_row="0"
+        android:onClick="playGame"
+        tools:text="A2" />
+    <Button
+        android:id="@+id/A3"
+        style="@style/boardPosition"
+        android:layout_column="2"
+        android:layout_row="0"
+        android:onClick="playGame"
+        tools:text="A3" />
+    <Button
+        android:id="@+id/B1"
+        style="@style/boardPosition"
+        android:layout_column="0"
+        android:layout_row="1"
+        android:onClick="playGame"
+        tools:text="B1" />
+    <Button
+        android:id="@+id/B2"
+        style="@style/boardPosition"
+        android:layout_column="1"
+        android:layout_row="1"
+        android:onClick="playGame"
+        tools:text="B2" />
+    <Button
+        android:id="@+id/B3"
+        style="@style/boardPosition"
+        android:layout_column="2"
+        android:layout_row="1"
+        android:onClick="playGame"
+        tools:text="B3" />
+    <Button
+        android:id="@+id/C1"
+        style="@style/boardPosition"
+        android:layout_column="0"
+        android:layout_row="2"
+        android:onClick="playGame"
+        tools:text="C1" />
+    <Button
+        android:id="@+id/C2"
+        style="@style/boardPosition"
+        android:layout_column="1"
+        android:layout_row="2"
+        android:onClick="playGame"
+        tools:text="C2" />
+    <Button
+        android:id="@+id/C3"
+        style="@style/boardPosition"
+        android:layout_column="2"
+        android:layout_row="2"
+        android:onClick="playGame"
+        tools:text="C3" />
+</GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/game_over"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/gameoverText"
+        android:visibility="gone"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gameoverText"
+        android:textSize="50sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_light"
+        android:id="@+id/winner_string"
+        android:visibility="gone"
+        tools:text="Player 1 wins"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/restartbutton"
+        android:id="@+id/restartbutton"
+        android:layout_below="@id/winner_string"
+        android:visibility="gone"
+        android:onClick="restart"/>
+</RelativeLayout>

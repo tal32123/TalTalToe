@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TalTalToe</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="player1">X</string>
+    <string name="player2">O</string>
+    <string name="game_over">GAME OVER</string>
+    <string name="restartbutton">Restart</string>
+    <string name="player_1_wins">Player 1 Wins!</string>
+    <string name="player_2_wins">Player 2 Wins!</string>
+    <string name="draw_game">Draw!</string>
+</resources>
